@@ -10,6 +10,21 @@ public class Student {
     private double gpa;
     private String gender;
     private List<String> activities = new ArrayList<>();
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int noOfNoteBooks) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activities = activities;
+        this.noOfNoteBooks = noOfNoteBooks;
+    }
+
+    public int getNoOfNoteBooks() {
+        return noOfNoteBooks;
+    }
+
+    private int noOfNoteBooks;
     public Student() {
 
     }
@@ -75,6 +90,7 @@ public class Student {
                 ", gpa=" + gpa +
                 ", gender='" + gender + '\'' +
                 ", activities=" + activities +
+                ", noOfNoteBooks=" + noOfNoteBooks +
                 '}';
     }
 }
