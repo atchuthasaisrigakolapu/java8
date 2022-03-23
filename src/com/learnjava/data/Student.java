@@ -10,7 +10,12 @@ public class Student {
     private double gpa;
     private String gender;
     private List<String> activities = new ArrayList<>();
+    public Student() {
 
+    }
+    public Student(String name){
+        this.name = name;
+    }
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
         this.gradeLevel = gradeLevel;
@@ -57,6 +62,9 @@ public class Student {
 
     public void setActivities(List<String> activities) {
         this.activities = activities;
+    }
+    public void printActivies(){
+        System.out.println(this.activities);
     }
 
     @Override

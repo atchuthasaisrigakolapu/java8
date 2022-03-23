@@ -2,9 +2,12 @@ package com.learnjava.data;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class StudentDataBase {
-
+    public static Supplier<Student> studentSupplier  = ()->{
+        return new Student("sai",2,3.6,"male", Arrays.asList("swimming","basketball","volleyball"));
+    };
     public static List<Student> getAllStudents() {
 
         Student s1 = new Student("sai",2,3.6,"male", Arrays.asList("swimming","basketball","volleyball"));
