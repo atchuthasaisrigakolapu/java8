@@ -2,6 +2,7 @@ package com.learnjava.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
 
@@ -10,6 +11,41 @@ public class Student {
     private double gpa;
     private String gender;
     private List<String> activities = new ArrayList<>();
+    private Optional<Bike> bike = Optional.empty();
+    private List<Bike> listBike = new ArrayList<>();
+
+    public List<Bike> getListBike() {
+        return listBike;
+    }
+
+    public void setListBike(List<Bike> listBike) {
+        this.listBike = listBike;
+    }
+
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", gradeLevel=" + gradeLevel +
+                ", gpa=" + gpa +
+                ", gender='" + gender + '\'' +
+                ", activities=" + activities +
+                ", bike=" + bike +
+                ", noOfNoteBooks=" + noOfNoteBooks +
+                '}';
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
+    }
+
+    public void setNoOfNoteBooks(int noOfNoteBooks) {
+        this.noOfNoteBooks = noOfNoteBooks;
+    }
 
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int noOfNoteBooks) {
         this.name = name;
@@ -82,15 +118,4 @@ public class Student {
         System.out.println(this.activities);
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", gradeLevel=" + gradeLevel +
-                ", gpa=" + gpa +
-                ", gender='" + gender + '\'' +
-                ", activities=" + activities +
-                ", noOfNoteBooks=" + noOfNoteBooks +
-                '}';
-    }
 }
